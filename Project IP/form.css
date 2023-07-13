@@ -1,0 +1,130 @@
+:root {
+  --primary-color: #e2d703;
+  --btns-color: #0c0e10;
+  --footer-color: #c1c7c2;
+  --white-color: #ffffff;
+  --black-color: black;
+  --font-family: "Roboto Condensed", sans-serif;
+  --citrine: hsl(57, 97%, 45%);
+  --xiketic: hsl(253, 21%, 13%);
+  --rich-black-fogra-39: hsl(170, 21%, 5%);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-family);
+  background-image: url("https://i.ytimg.com/vi/bk0ck-g_rPk/maxresdefault.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  color: var(--white-color);
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust the opacity as desired */
+  z-index: -1;
+}
+
+.form-review {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  position: relative;
+  z-index: 1;
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Adjust the opacity and color as desired */
+  overflow-y: auto;
+}
+
+.spider-review {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 400px;
+}
+
+label {
+  margin-bottom: 5px;
+  color: var(--primary-color);
+}
+
+input,
+textarea {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  margin-bottom: 15px;
+  width: 100%;
+  background-color: var(--xiketic);
+  color: var(--white-color);
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+}
+
+.error {
+  color: red;
+  margin-bottom: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: var(--primary-color);
+  color: var(--black-color);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--citrine);
+}
+
+option {
+  background-color: var(--xiketic);
+  color: var(--white-color);
+}
+
+select {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  margin-bottom: 15px;
+  width: 100%;
+  background-color: var(--xiketic);
+  color: var(--white-color);
+}
+
+select:focus {
+  outline: none;
+}
+
+::placeholder {
+  color: var(--white-color);
+  opacity: 0.7;
+}

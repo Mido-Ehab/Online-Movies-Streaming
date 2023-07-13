@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Form</title>
+    <link rel="stylesheet" href="form.css" />
+  </head>
+  <body>
+    <section class="form-review">
+      <div class="spider-review">
+        Movie Review
+        <a href="index.html"><img src="./images/logo.png" alt="" /></a>
+      </div>
+      <form
+        action="http://localhost:8000"
+        id="form"
+        method="POST"
+        autocomplete="off"
+      >
+        <label for="fname">First Name:</label>
+        <input type="text" id="fname" name="fname" /><br />
+        <div id="fnameError" class="error"></div>
+        <br />
+
+        <label for="lname">Last Name:</label>
+        <input type="text" id="last" name="lname" /><br />
+        <div id="lnameError" class="error"></div>
+        <br />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" /><br />
+        <div id="emailError" class="error"></div>
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" /><br />
+        <div id="ageError" class="error"></div>
+        <br />
+
+        <label for="country">Country:</label>
+        <select
+          id="country"
+          name="country"
+          onchange="handleCountryChange(this)"
+        >
+          <option value="Egypt">Egypt</option>
+          <option value="Saudi Arabia">Saudi Arabia</option>
+          <option value="United Arab Emirates">United Arab Emirates</option>
+          <option value="Other">Other</option></select
+        ><br />
+        <div id="countryError" class="error"></div>
+        <br />
+
+        <div id="otherCountryContainer" style="display: none">
+          <label for="otherCountry">Enter Country:</label>
+          <input type="text" id="otherCountry" name="otherCountry" />
+        </div>
+
+        <label for="rating">Rating:</label>
+        <input type="number" id="rating" name="rating" /><br />
+        <div id="ratingError" class="error"></div>
+        <br />
+
+        <label for="comment">Comment:</label>
+        <textarea name="comment" id="comment" cols="30" rows="10"></textarea
+        ><br />
+
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+    <script src="main2.js"></script>
+  </body>
+</html>
